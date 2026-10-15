@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="th" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GRURU MUSEUM — New Knowledge. New Storytelling. Built for Everyday Living.</title>
+  <meta name="description" content="พิพิธภัณฑ์ความรู้ดิจิทัลที่ปลุกความรู้ซึ่งซ่อนอยู่ในอดีตให้กลับมามีชีวิต ในรูปแบบเรื่องเล่าใหม่ที่คนรุ่นใหม่ใช้ได้จริงทุกวัน">
+  
+  <!-- Thai & Modern Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via official CDN for rapid layout utilities -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="specimen-grid">
+
+  <!-- ==================== NAVIGATION BAR ==================== -->
+  <nav class="gr-navbar">
+    <div class="flex items-center gap-3">
+      <a href="#home" class="flex items-center gap-3">
+        <img src="assets/logo.svg" alt="GRURU MUSEUM Logo" class="h-10 w-auto">
+      </a>
+      <div class="hidden md:block h-5 w-[1px] bg-[#2C2C3A]"></div>
+      <span class="hidden md:inline font-mono text-xs text-[#8A8A9E] uppercase tracking-wider">
+        Future Archaeology Lab
+      </span>
+    </div>
+
+    <!-- Main Navigation Links -->
+    <ul class="gr-nav-links">
+      <li><a href="#home" class="gr-nav-link active">หน้าแรก</a></li>
+      <li><a href="#exhibitions" class="gr-nav-link">HALL 01 นิทรรศการ</a></li>
+      <li><a href="#booming" class="gr-nav-link">Data Booming</a></li>
+      <li><a href="#graph" class="gr-nav-link">HALL 02 กราฟความรู้</a></li>
+      <li><a href="#everyday" class="gr-nav-link">Everyday Lab</a></li>
+      <li><a href="#about" class="gr-nav-link">เกี่ยวกับเรา</a></li>
+    </ul>
+
+    <!-- Action Buttons -->
+    <div class="flex items-center gap-3">
+      <a href="presentation.html" target="_blank" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#17171F] hover:bg-[#2C2C3A] border border-[#FFC233]/40 text-[#FFC233] text-xs font-mono transition-all">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
+        <span>สไลด์นำเสนอผู้บริหาร</span>
+      </a>
+      
+      <a href="#booming" class="gr-btn-primary text-xs py-2 px-3 sm:px-4">
+        <span>เริ่มขุดค้น</span>
+      </a>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-toggle" class="md:hidden p-2 text-[#F2EDE3] hover:text-[#D7FF3A]" aria-label="Toggle Navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="home" class="relative pt-32 pb-20 px-6 max-w-7xl mx-auto overflow-hidden">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Manifesto & Call to Action -->
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-[#17171F] border border-[#FFC233]/40 rounded text-xs font-mono text-[#FFC233] mb-6">
+          <span class="w-2 h-2 rounded-full bg-[#D7FF3A] animate-pulse"></span>
+          <span>FUTURE ARCHAEOLOGY • ห้องแล็บนักโบราณคดีจากอนาคต</span>
+        </div>
+
+        <h1 class="font-['Chakra_Petch'] text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 tracking-tight">
+          <span class="decode-text block text-[#F2EDE3]">New Knowledge.</span>
+          <span class="decode-text block text-[#D7FF3A]">New Storytelling.</span>
+          <span class="block text-[#FFC233] text-3xl sm:text-4xl mt-1">Built for Everyday Living.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-[#8A8A9E] font-['IBM_Plex_Sans_Thai'] leading-relaxed mb-8 max-w-2xl">
+          พิพิธภัณฑ์ความรู้ดิจิทัลที่ปลุก “ความรู้ซึ่งซ่อนอยู่ในอดีต” ให้กลับมามีชีวิต เปลี่ยนประวัติศาสตร์และภูมิปัญญาไทยเป็นกราฟความรู้ที่สำรวจได้ด้วยตนเอง จบทุกเรื่องด้วยข้อคิดที่นำไปใช้จริงในชีวิตประจำวัน
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4 mb-10">
+          <a href="#booming" class="gr-btn-primary">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            <span>ทดลอง Data Booming</span>
+          </a>
+          <a href="#graph" class="gr-btn-secondary">
+            <span>สำรวจ HALL 02 แผนที่ความรู้</span>
+          </a>
+        </div>
+
+        <!-- 3-Second Executive Metrics -->
+        <div class="grid grid-cols-3 gap-3 pt-6 border-t border-[#2C2C3A]">
+          <div class="bg-[#17171F] border border-[#2C2C3A] p-3 rounded hud-cut">
+            <div class="text-[#D7FF3A] font-mono text-xl sm:text-2xl font-bold">3–5 นาที</div>
+            <div class="text-[11px] sm:text-xs text-[#8A8A9E]">ดูจบเข้าใจทันที ไม่ยืดเยื้อ</div>
+          </div>
+          <div class="bg-[#17171F] border border-[#2C2C3A] p-3 rounded hud-cut">
+            <div class="text-[#2EE6FF] font-mono text-xl sm:text-2xl font-bold">100%</div>
+            <div class="text-[11px] sm:text-xs text-[#8A8A9E]">มีแหล่งอ้างอิงตรวจสอบได้</div>
+          </div>
+          <div class="bg-[#17171F] border border-[#2C2C3A] p-3 rounded hud-cut">
+            <div class="text-[#FFC233] font-mono text-xl sm:text-2xl font-bold">1 Takeaway</div>
+            <div class="text-[11px] sm:text-xs text-[#8A8A9E]">นำไปใช้จริงได้ทันทีทุกครั้ง</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Hero Concept Showcase -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-xl overflow-hidden border-2 border-[#FFC233]/40 shadow-2xl bg-[#0B0B0F] group">
+          <img src="assets/future_thai_museum_hero.jpg" alt="GRURU Museum Hero Hall" class="w-full h-[460px] object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0F] via-transparent to-transparent opacity-80"></div>
+          <div class="absolute inset-0 scanline-overlay pointer-events-none opacity-20"></div>
+
+          <!-- Floating Specimen HUD Label -->
+          <div class="absolute bottom-4 left-4 right-4 p-4 bg-[#0B0B0F]/90 backdrop-blur-md border border-[#2C2C3A] rounded hud-cut">
+            <div class="flex items-center justify-between text-[11px] font-mono text-[#FFC233] mb-1">
+              <span>[SPECIMEN] GRM-2026-HERO-001</span>
+              <span class="text-[#D7FF3A] flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#D7FF3A] animate-ping"></span>
+                ACTIVE
+              </span>
+            </div>
+            <div class="font-['Chakra_Petch'] text-sm font-bold text-[#F2EDE3]">
+              โถงนิทรรศการหลัก Future Archaeology นำเสนอสถาปัตยกรรมไทยผสมผสานไซไฟ
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 1: HALL 01 EXHIBITIONS ==================== -->
+  <section id="exhibitions" class="py-20 px-6 max-w-7xl mx-auto border-t border-[#2C2C3A]">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+      <div>
+        <div class="text-xs font-mono text-[#FFC233] uppercase tracking-wider mb-2">HALL 01 • VIRTUAL EXHIBITIONS</div>
+        <h2 class="font-['Chakra_Petch'] text-3xl sm:text-4xl font-bold text-[#F2EDE3]">
+          นิทรรศการความรู้ดิจิทัล (Visual Storytelling)
+        </h2>
+      </div>
+      <p class="text-sm text-[#8A8A9E] font-mono mt-2 md:mt-0">
+        เล่าเรื่องด้วยภาพและกราฟความรู้ จบได้ใน 3–5 นาที
+      </p>
+    </div>
+
+    <!-- Exhibitions Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="bg-[#17171F] border border-[#2C2C3A] rounded-lg overflow-hidden hud-cut flex flex-col justify-between hover:border-[#D7FF3A] transition-all group">
+        <div>
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/kg-everyday-plant.png" alt="Botany and Health" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 specimen-tag lime">GRM-1872-SCI-014</span>
+          </div>
+          <div class="p-6">
+            <div class="text-xs font-mono text-[#2EE6FF] mb-2">วิทยาศาสตร์ & ภูมิปัญญาไทย</div>
+            <h3 class="font-['Chakra_Petch'] text-xl font-bold text-[#F2EDE3] mb-2 group-hover:text-[#D7FF3A] transition-colors">
+              พฤกษศาสตร์ไทยกับสารต้านอนุมูลอิสระ
+            </h3>
+            <p class="text-xs text-[#8A8A9E] leading-relaxed mb-4">
+              ถอดรหัสความลับเครื่องแกงสมุนไพร ขมิ้นชัน และพริกไทยดำ สู่การดูดซึมระดับเซลล์ที่เพิ่มขึ้น 2,000%
+            </p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <div class="p-3 bg-[#0B0B0F] rounded border border-[#2C2C3A] text-xs font-mono text-[#D7FF3A] mb-3">
+            ★ Everyday Takeaway: ใส่พริกไทยดำบดสดในแกงส้มทุกมื้อ
+          </div>
+          <button onclick="openSpecimenModal({id:'GRM-1872-SCI-014', title:'พฤกษศาสตร์ไทยกับสารต้านอนุมูลอิสระ', category:'วิทยาศาสตร์', era:'รัตนโกสินทร์ตอนต้น → ปัจจุบัน', summary:'สารเคอร์คูมินในขมิ้นชันทำงานร่วมกับพิเพอรีนในพริกไทยดำ เพิ่มการดูดซึมเข้าสู่กระแสเลือดได้ถึง 2,000%', takeaway:'ใส่พริกไทยดำบดสดร่วมกับแกงส้มเพื่อเพิ่มประสิทธิภาพการต้านอักเสบ', sources:'หอสมุดจดหมายเหตุ & งานวิจัย ม.มหิดล'})" class="w-full py-2 bg-[#17171F] hover:bg-[#2C2C3A] text-[#F2EDE3] font-mono text-xs border border-[#2C2C3A] rounded">
+            เปิดดูโหนดความรู้
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-[#17171F] border border-[#2C2C3A] rounded-lg overflow-hidden hud-cut flex flex-col justify-between hover:border-[#2EE6FF] transition-all group">
+        <div>
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/thai_future_archaeology_hud.jpg" alt="Thai Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 specimen-tag cyan">GRM-1550-ARCH-008</span>
+          </div>
+          <div class="p-6">
+            <div class="text-xs font-mono text-[#8C6BFF] mb-2">สถาปัตยกรรม & เทคโนโลยี</div>
+            <h3 class="font-['Chakra_Petch'] text-xl font-bold text-[#F2EDE3] mb-2 group-hover:text-[#2EE6FF] transition-colors">
+              เรือนไทยและการระบายความร้อนธรรมชาติ
+            </h3>
+            <p class="text-xs text-[#8A8A9E] leading-relaxed mb-4">
+              ศึกษาหลักการ Passive Cooling ในสถาปัตยกรรมไทยโบราณที่นำมาประยุกต์ใช้ลดพลังงานในบ้านยุคใหม่
+            </p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <div class="p-3 bg-[#0B0B0F] rounded border border-[#2C2C3A] text-xs font-mono text-[#2EE6FF] mb-3">
+            ★ Everyday Takeaway: จัดทิศทางลมใต้ร่มเงา ลดค่าไฟแอร์ได้ 30%
+          </div>
+          <button onclick="openSpecimenModal({id:'GRM-1550-ARCH-008', title:'เรือนไทยและการระบายความร้อนธรรมชาติ', category:'เทคโนโลยี & สถาปัตย์', era:'อยุธยา → ศตวรรษที่ 21', summary:'โครงสร้างยกพื้นสูง ชายคายื่นยาว และช่องระบายลมหน้าจั่ว ช่วยให้อากาศหมุนเวียนโดยไม่ต้องพึ่งเครื่องกล', takeaway:'ออกแบบช่องเปิดบนและล่างในบ้านเพื่อสร้าง Stack Effect ไล่อากาศร้อน', sources:'สมาคมสถาปนิกสยาม & บันทึกช่างหลวง'})" class="w-full py-2 bg-[#17171F] hover:bg-[#2C2C3A] text-[#F2EDE3] font-mono text-xs border border-[#2C2C3A] rounded">
+            เปิดดูโหนดความรู้
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-[#17171F] border border-[#2C2C3A] rounded-lg overflow-hidden hud-cut flex flex-col justify-between hover:border-[#FFC233] transition-all group">
+        <div>
+          <div class="relative h-56 overflow-hidden">
+            <img src="assets/kg-futuristic-sphere.png" alt="Knowledge Synthesis" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 specimen-tag amber">GRM-1292-LANG-003</span>
+          </div>
+          <div class="p-6">
+            <div class="text-xs font-mono text-[#FF5A1F] mb-2">ประวัติศาสตร์ & ปัญญาประดิษฐ์</div>
+            <h3 class="font-['Chakra_Petch'] text-xl font-bold text-[#F2EDE3] mb-2 group-hover:text-[#FFC233] transition-colors">
+              จากศิลาจารึกสู่ AI สัทศาสตร์ภาษาไทย
+            </h3>
+            <p class="text-xs text-[#8A8A9E] leading-relaxed mb-4">
+              ถอดรหัสวิวัฒนาการอักขระไทยในศิลาจารึกสุโขทัย สู่โมเดลการประมวลผลภาษาธรรมชาติ (NLP) ยุคปัญญาประดิษฐ์
+            </p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <div class="p-3 bg-[#0B0B0F] rounded border border-[#2C2C3A] text-xs font-mono text-[#FFC233] mb-3">
+            ★ Everyday Takeaway: เข้าใจโครงสร้างภาษาเพื่อ Prompt AI ให้แม่นยำ
+          </div>
+          <button onclick="openSpecimenModal({id:'GRM-1292-LANG-003', title:'จากศิลาจารึกสู่ AI สัทศาสตร์ภาษาไทย', category:'ภาษาศาสตร์ & AI', era:'สุโขทัย → ยุค AI ปัจจุบัน', summary:'หลักการวางสระและพยัญชนะในบรรทัดเดียวกันของลายสือไทย เป็นรากฐานสำคัญในการทำ Tokenization ของ Large Language Models ในปัจจุบัน', takeaway:'ใช้โครงสร้างคำที่ชัดเจนในการสื่อสารกับ AI เพื่อลดการหลอนของข้อมูล', sources:'ศิลาจารึกหลักที่ 1 & งานวิจัย Thai NLP'})" class="w-full py-2 bg-[#17171F] hover:bg-[#2C2C3A] text-[#F2EDE3] font-mono text-xs border border-[#2C2C3A] rounded">
+            เปิดดูโหนดความรู้
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2: DATA BOOMING SIMULATOR ==================== -->
+  <section id="booming" class="py-20 px-6 max-w-7xl mx-auto border-t border-[#2C2C3A]">
+    <div class="bg-[#17171F] border border-[#2C2C3A] rounded-xl p-8 hud-cut relative overflow-hidden">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 pb-4 border-b border-[#2C2C3A]">
+        <div>
+          <div class="inline-flex items-center gap-2 text-xs font-mono text-[#D7FF3A] uppercase tracking-wider mb-1">
+            <span class="w-2 h-2 rounded-full bg-[#D7FF3A]"></span>
+            <span>SIGNATURE INNOVATION • การระเบิดความรู้รอบทิศทาง</span>
+          </div>
+          <h2 class="font-['Chakra_Petch'] text-3xl font-bold text-[#F2EDE3]">
+            Data Booming Simulator (ทดลองสัมผัสจริง)
+          </h2>
+          <p class="text-xs text-[#8A8A9E] mt-1 font-mono">
+            คลิกที่โหนดกลางเพื่อดูการระเบิดของความรู้ 8 โหนดแบบรัศมี (Stagger 40ms)
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4 mt-4 md:mt-0">
+          <div class="flex items-center gap-2 bg-[#0B0B0F] px-4 py-2 rounded border border-[#2C2C3A]">
+            <span class="text-xs font-mono text-[#8A8A9E]">ความเชื่อมโยง:</span>
+            <span id="booming-count" class="text-xl font-mono font-bold text-[#D7FF3A]">01</span>
+          </div>
+          <button id="reset-booming-btn" class="px-4 py-2 bg-[#0B0B0F] hover:bg-[#2C2C3A] text-[#F2EDE3] border border-[#2C2C3A] text-xs font-mono rounded transition-colors">
+            ↻ รีเซ็ตโหนด
+          </button>
+        </div>
+      </div>
+
+      <!-- Simulator Canvas Container -->
+      <div id="booming-container" class="rounded-lg">
+        <!-- Injected via script.js -->
+      </div>
+
+      <div class="mt-4 flex flex-wrap items-center justify-between text-xs font-mono text-[#8A8A9E]">
+        <span>⚡ สเปก: 1 โหนดกลาง → ระเบิด 6–12 โหนดลูก • ห่างกัน 40ms • วงแหวนเรืองแสงหนึ่งจังหวะ</span>
+        <span class="text-[#D7FF3A]">คลิกที่โหนดลูกเพื่อเปิด Specimen Label</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: HALL 02 KNOWLEDGE GRAPH ==================== -->
+  <section id="graph" class="py-20 px-6 max-w-7xl mx-auto border-t border-[#2C2C3A]">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+      <div>
+        <div class="text-xs font-mono text-[#2EE6FF] uppercase tracking-wider mb-2">HALL 02 • KNOWLEDGE GRAPH EXPLORER</div>
+        <h2 class="font-['Chakra_Petch'] text-3xl sm:text-4xl font-bold text-[#F2EDE3]">
+          แผนที่ความรู้แบบอินเตอร์แอคทีฟ (Interactive Force Graph)
+        </h2>
+      </div>
+      <div class="text-xs font-mono text-[#8A8A9E] mt-2 md:mt-0">
+        ขับเคลื่อนด้วย D3.js Physics Simulation บน Canvas รองรับการลาก ขยาย และกรองข้อมูล
+      </div>
+    </div>
+
+    <!-- Graph Visual Box -->
+    <div id="graph-canvas-container">
+      
+      <!-- Top Filters Toolbar -->
+      <div class="graph-toolbar flex-wrap">
+        <button class="kg-filter-btn px-2.5 py-1 text-xs font-mono rounded border border-[#2C2C3A] text-[#F2EDE3] hover:border-[#D7FF3A] active" data-cat="all">ทั้งหมด</button>
+        <button class="kg-filter-btn px-2.5 py-1 text-xs font-mono rounded border border-[#2C2C3A] text-[#2EE6FF] hover:border-[#2EE6FF]" data-cat="science">● วิทยาศาสตร์</button>
+        <button class="kg-filter-btn px-2.5 py-1 text-xs font-mono rounded border border-[#2C2C3A] text-[#FF5A1F] hover:border-[#FF5A1F]" data-cat="history">⬡ ประวัติศาสตร์</button>
+        <button class="kg-filter-btn px-2.5 py-1 text-xs font-mono rounded border border-[#2C2C3A] text-[#8C6BFF] hover:border-[#8C6BFF]" data-cat="tech">■ เทคโนโลยี</button>
+        <button class="kg-filter-btn px-2.5 py-1 text-xs font-mono rounded border border-[#2C2C3A] text-[#FFC233] hover:border-[#FFC233]" data-cat="wisdom">▲ ภูมิปัญญาไทย</button>
+        <button class="kg-filter-btn px-2.5 py-1 text-xs font-mono rounded border border-[#2C2C3A] text-[#34E89E] hover:border-[#34E89E]" data-cat="nature">◆ ธรรมชาติ</button>
+        
+        <div class="h-4 w-[1px] bg-[#2C2C3A]"></div>
+        
+        <input id="kg-search-input" type="text" placeholder="ค้นหาโหนดความรู้..." class="bg-[#0B0B0F] border border-[#2C2C3A] text-xs text-[#F2EDE3] px-2.5 py-1 rounded focus:outline-none focus:border-[#D7FF3A] w-36 sm:w-48 font-mono">
+      </div>
+
+      <!-- HTML5 Canvas -->
+      <canvas id="kg-canvas"></canvas>
+
+      <!-- Bottom Era Time Slider -->
+      <div class="graph-time-slider">
+        <span class="text-xs font-mono text-[#FFC233] whitespace-nowrap">แถบเลื่อนเวลา:</span>
+        <input id="kg-time-slider" type="range" min="1238" max="2026" value="2026" step="10" class="w-40 sm:w-64 accent-[#D7FF3A] cursor-pointer">
+        <span id="kg-time-val" class="font-mono text-xs font-bold text-[#D7FF3A] min-w-[3.5rem]">2026</span>
+      </div>
+
+    </div>
+
+    <!-- Graph Legend -->
+    <div class="mt-4 flex flex-wrap items-center justify-between text-xs font-mono text-[#8A8A9E] bg-[#17171F] p-3 rounded border border-[#2C2C3A]">
+      <div class="flex items-center gap-4">
+        <span>เส้นเชื่อมโยง:</span>
+        <span class="flex items-center gap-1.5"><span class="w-4 h-[2px] bg-[#2EE6FF] inline-block"></span> เส้นทึบ: มีอิทธิพลต่อ (influenced)</span>
+        <span class="flex items-center gap-1.5"><span class="w-4 h-[2px] border-b border-dashed border-[#FFC233] inline-block"></span> เส้นประ: พัฒนามาจาก (derived_from)</span>
+        <span class="flex items-center gap-1.5"><span class="w-4 h-[2px] border-b border-dotted border-[#D7FF3A] inline-block"></span> เส้นจุด: นำไปใช้ใน (used_in)</span>
+      </div>
+      <span class="text-[#D7FF3A] mt-2 sm:mt-0">💡 คลิกที่โหนดเพื่อดูรายละเอียดและ Takeaway</span>
+    </div>
+
+  </section>
+
+  <!-- ==================== SECTION 4: EVERYDAY LAB ==================== -->
+  <section id="everyday" class="py-20 px-6 max-w-7xl mx-auto border-t border-[#2C2C3A]">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <div class="lg:col-span-5">
+        <div class="text-xs font-mono text-[#D7FF3A] uppercase tracking-wider mb-2">EVERYDAY LAB • ความรู้สู่ชีวิตจริง</div>
+        <h2 class="font-['Chakra_Petch'] text-3xl sm:text-4xl font-bold text-[#F2EDE3] mb-4">
+          เปลี่ยนความรู้ในอดีต สู่สิ่งที่คุณใช้ได้ในชีวิตประจำวัน
+        </h2>
+        <p class="text-sm text-[#8A8A9E] leading-relaxed mb-6">
+          เรายึดมั่นในปรัชญา <strong>Built for Everyday Living</strong> ทุกนิทรรศการและทุกโหนดความรู้ต้องมีคำตอบว่า <em>“แล้วสิ่งนี้ช่วยให้ชีวิตฉันดีขึ้นได้อย่างไร?”</em>
+        </p>
+
+        <!-- Value Cards -->
+        <div class="space-y-3">
+          <div class="p-3.5 bg-[#17171F] border border-[#2C2C3A] rounded hud-cut">
+            <div class="text-xs font-mono text-[#D7FF3A] font-bold mb-1">01 • โภชนาการและสุขภาพ</div>
+            <div class="text-xs text-[#8A8A9E]">เข้าใจการผสานสมุนไพรพื้นบ้านเพื่อเพิ่มภูมิคุ้มกันระดับโมเลกุล</div>
+          </div>
+          <div class="p-3.5 bg-[#17171F] border border-[#2C2C3A] rounded hud-cut">
+            <div class="text-xs font-mono text-[#2EE6FF] font-bold mb-1">02 • การอยู่อาศัยและพลังงาน</div>
+            <div class="text-xs text-[#8A8A9E]">หลักการระบายความร้อนธรรมชาติแบบสถาปัตยกรรมไทย เพื่อบ้านเย็นสบาย</div>
+          </div>
+          <div class="p-3.5 bg-[#17171F] border border-[#2C2C3A] rounded hud-cut">
+            <div class="text-xs font-mono text-[#FFC233] font-bold mb-1">03 • วิธีคิดและการแก้ปัญหา</div>
+            <div class="text-xs text-[#8A8A9E]">ตรรกะการบริหารทรัพยากรชุมชนจากกติกาเหมืองฝายโบราณ</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 rounded-xl overflow-hidden border border-[#2C2C3A]">
+        <img src="assets/kg-isometric-missions.png" alt="Everyday Living Pipeline" class="w-full h-auto object-cover">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 5: ABOUT THE MUSEUM ==================== -->
+  <section id="about" class="py-20 px-6 max-w-7xl mx-auto border-t border-[#2C2C3A]">
+    <div class="bg-[#17171F] border border-[#2C2C3A] rounded-xl p-8 sm:p-12 hud-cut">
+      
+      <div class="max-w-3xl mb-8">
+        <div class="text-xs font-mono text-[#FFC233] uppercase tracking-wider mb-2">ABOUT GRURU MUSEUM</div>
+        <h2 class="font-['Chakra_Petch'] text-3xl sm:text-4xl font-bold text-[#F2EDE3] mb-4">
+          “อดีตคือข้อมูล • อนาคตคือเรื่องเล่า”
+        </h2>
+        <p class="text-base text-[#8A8A9E] leading-relaxed">
+          GRURU MUSEUM ถือกำเนิดขึ้นสำหรับคนวัย 22–40 ปีที่อยากเข้าใจโลกให้ลึกกว่าคลิปสั้น แต่ไม่อยากรู้สึกเหมือนนั่งเรียน เราคือพิพิธภัณฑ์ความรู้ดิจิทัลสไตล์ modern art ผสม sci-fi ที่เชื่อว่าภูมิปัญญาบรรพชนยังทรงพลังเสมอ เมื่อถูกนำมาถอดรหัสด้วยเทคโนโลยีร่วมสมัย
+        </p>
+      </div>
+
+      <!-- 5-Step Pipeline Recap -->
+      <div class="grid grid-cols-1 sm:grid-cols-5 gap-3 pt-6 border-t border-[#2C2C3A] mb-8">
+        <div class="p-3 bg-[#0B0B0F] rounded border border-[#2C2C3A] text-center">
+          <div class="text-xs font-mono text-[#FF5A1F] font-bold">01 EXCAVATE</div>
+          <div class="text-sm font-bold text-[#F2EDE3] mt-1">ขุดค้น</div>
+        </div>
+        <div class="p-3 bg-[#0B0B0F] rounded border border-[#2C2C3A] text-center">
+          <div class="text-xs font-mono text-[#8C6BFF] font-bold">02 DECODE</div>
+          <div class="text-sm font-bold text-[#F2EDE3] mt-1">ถอดรหัส</div>
+        </div>
+        <div class="p-3 bg-[#0B0B0F] rounded border border-[#2C2C3A] text-center">
+          <div class="text-xs font-mono text-[#2EE6FF] font-bold">03 RETELL</div>
+          <div class="text-sm font-bold text-[#F2EDE3] mt-1">เล่าใหม่</div>
+        </div>
+        <div class="p-3 bg-[#0B0B0F] rounded border border-[#2C2C3A] text-center">
+          <div class="text-xs font-mono text-[#D7FF3A] font-bold">04 CONNECT</div>
+          <div class="text-sm font-bold text-[#F2EDE3] mt-1">เชื่อมโยง</div>
+        </div>
+        <div class="p-3 bg-[#0B0B0F] rounded border border-[#2C2C3A] text-center">
+          <div class="text-xs font-mono text-[#FFC233] font-bold">05 APPLY</div>
+          <div class="text-sm font-bold text-[#F2EDE3] mt-1">ใช้จริง</div>
+        </div>
+      </div>
+
+      <!-- Executive Presentation Link Box -->
+      <div class="p-4 bg-[#0B0B0F] border border-[#D7FF3A]/40 rounded flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <div class="font-['Chakra_Petch'] text-base font-bold text-[#D7FF3A]">เอกสารนำเสนอสำหรับคณะกรรมการและผู้บริหาร</div>
+          <div class="text-xs text-[#8A8A9E]">เข้าชมสไลด์สรุปยุทธศาสตร์ แผนการพัฒนา และการจัดสรรงบประมาณโครงการ</div>
+        </div>
+        <a href="presentation.html" target="_blank" class="gr-btn-primary text-xs py-2 px-4 whitespace-nowrap">
+          เปิดสไลด์นำเสนอ (11 สไลด์) →
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-[#2C2C3A] bg-[#07070A] py-12 px-6">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-mono text-[#8A8A9E]">
+      <div class="flex items-center gap-3">
+        <img src="assets/logo.svg" alt="GRURU Logo" class="h-8 w-auto">
+        <span>© 2026 GRURU MUSEUM. Future Archaeology. All rights reserved.</span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <span class="text-[#D7FF3A]">WCAG AA Certified</span>
+        <span>•</span>
+        <span>Thai Heritage Digitalized</span>
+        <span>•</span>
+        <a href="presentation.html" class="hover:text-[#F2EDE3] underline">Executive Deck</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== SPECIMEN LABEL MODAL ==================== -->
+  <div id="specimenModal" class="gr-modal">
+    <div class="gr-modal-content">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between border-b border-[#2C2C3A] pb-3 mb-4">
+        <div class="flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-full bg-[#D7FF3A]"></span>
+          <span id="modal-specimen-id" class="text-xs font-mono text-[#FFC233]">GRM-SPECIMEN-001</span>
+        </div>
+        <button onclick="closeSpecimenModal()" class="text-xs font-mono text-[#8A8A9E] hover:text-[#F2EDE3] px-2 py-1 rounded bg-[#0B0B0F] border border-[#2C2C3A]">
+          ✕ ปิด (ESC)
+        </button>
+      </div>
+
+      <!-- Modal Body -->
+      <h3 id="modal-specimen-title" class="font-['Chakra_Petch'] text-2xl font-bold text-[#F2EDE3] mb-2">
+        ชื่อวัตถุความรู้
+      </h3>
+
+      <div class="grid grid-cols-2 gap-2 text-xs font-mono mb-4 text-[#8A8A9E]">
+        <div>หมวดหมู่: <span id="modal-specimen-cat" class="text-[#2EE6FF] font-semibold">-</span></div>
+        <div>ยุคสมัย: <span id="modal-specimen-era" class="text-[#FF5A1F] font-semibold">-</span></div>
+      </div>
+
+      <div class="bg-[#0B0B0F] p-4 rounded border border-[#2C2C3A] mb-4">
+        <div class="text-[11px] font-mono text-[#8A8A9E] mb-1">บทสรุปความรู้ (SUMMARY):</div>
+        <p id="modal-specimen-summary" class="text-xs text-[#F2EDE3] leading-relaxed">
+          รายละเอียดเนื้อหาของโหนดความรู้
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-r from-[#17171F] to-[#0B0B0F] p-4 rounded border-2 border-[#D7FF3A] mb-4">
+        <div class="text-[11px] font-mono text-[#D7FF3A] font-bold mb-1">★ EVERYDAY TAKEAWAY (นำไปใช้จริง):</div>
+        <p id="modal-specimen-takeaway" class="text-xs text-[#F2EDE3] font-semibold leading-relaxed">
+          แนวทางการประยุกต์ใช้ในชีวิตประจำวัน
+        </p>
+      </div>
+
+      <div class="text-[11px] font-mono text-[#8A8A9E]">
+        แหล่งอ้างอิง: <span id="modal-specimen-sources" class="text-[#F2EDE3]">-</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Load JavaScript Logic -->
+  <script src="script.js"></script>
+  <!-- Fallback load for script.jss if served directly -->
+  <script>
+    if (typeof boomingData === 'undefined') {
+      const fallbackScript = document.createElement('script');
+      fallbackScript.src = 'script.jss';
+      document.body.appendChild(fallbackScript);
+    }
+  </script>
+
+</body>
+</html>
